@@ -15,9 +15,9 @@
     <div class="gridHero">
         <img class="gridHero__bannerImage" src="https://source.unsplash.com/random/900x330">
         
-        <!-- <div class="gridHero__logoContainer">
+        <div class="gridHero__logoContainer">
             <img class="gridHero__logo" src="https://source.unsplash.com/random/300x250?v=1">
-        </div> -->
+        </div>
 
         <div class="gridHero__description">
             <h1 class="gridHero__lure">50-80%</h1>
@@ -28,15 +28,31 @@
 
     <style>
         .gridHero {
+            border: 4px solid gold;
             display: grid;
             max-width: 1000px;
-            grid-template-columns: repeat(auto-fit, 150px);
-            border: 4px solid gold;
+            grid-template-columns: 1fr 400px;
+            /* align-items: center; */
+            grid-gap: 20px;
         }
 
         .gridHero__bannerImage {
             border: 4px solid rebeccapurple;
+            width: 100%;
         }
+
+      
+        .gridHero__logoContainer {
+            position: absolute;
+            justify-self: center;
+            align-self: center;
+        }     
+        
+          .gridHero__logo {
+            border: 4px solid crimson;
+            width: 125px;
+        }
+
 
         .gridHero__description {
             border: 4px solid dodgerblue;
