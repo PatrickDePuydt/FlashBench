@@ -16,19 +16,25 @@ body {
 }
 
 .gridHero {
-  border: 4px solid yellow;
+  
   display: grid;
   grid-column: span 2 / 8;
   grid-row: span 1;
 
   grid-gap: 20px;
-  grid-template-columns: 60% auto;
-  /* grid-column: span 2 / 6; */
+  grid-template-columns: auto 30%;
+  grid-template-rows: 325px;
+}
+
+.gridHero__banner-container {
+    border: 1px solid black;
+    overflow: hidden;
 }
 
 .gridHero__bannerImage {
-  border: 4px solid cyan;
-  width: 100%;
+  border: 1px solid cyan;
+  /* width: 100%; */
+  transform: scale(1.03);
 }
 
 .gridHero__description {
@@ -42,10 +48,10 @@ body {
   position: absolute;
   justify-self: center;
   align-self: center;
-  padding-left: 15%;
+  padding-left: 28%;
 }
 
 .gridHero__logo {
-  border: 4px solid crimson;
   width: 125px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
