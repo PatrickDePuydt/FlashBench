@@ -1,3 +1,49 @@
 body {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.marketplace-stores {
+  border: 4px solid deeppink;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 20px;
+}
+
+.item {
+  background: coral;
+}
+
+.gridHero {
+  border: 4px solid yellow;
+  display: grid;
+grid-column: span 2 / 5;
+grid-row: span 1;
+
+  max-width: 1000px;
+  grid-gap: 20px;
+  grid-template-columns: 600px auto;
+  /* grid-column: span 2 / 6; */
+}
+
+.gridHero__bannerImage {
+  border: 4px solid cyan;
+  width: 100%;
+}
+
+.gridHero__description {
+  background: coral;
+  padding-left: 50px;
+}
+
+.gridHero__logoContainer {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    padding-left: 150px;
+}
+
+.gridHero__logo {
+    border: 4px solid crimson;
+    width: 125px;
 }
