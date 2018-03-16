@@ -5,9 +5,10 @@ body {
 .marketplace-stores {
   border: 4px solid deeppink;
   display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: repeat(12, auto);
   grid-gap: 20px;
+  justify-content: center;
 }
 
 .item {
@@ -17,12 +18,11 @@ body {
 .gridHero {
   border: 4px solid yellow;
   display: grid;
-grid-column: span 2 / 5;
-grid-row: span 1;
+  grid-column: span 2 / 8;
+  grid-row: span 1;
 
-  max-width: 1000px;
   grid-gap: 20px;
-  grid-template-columns: 600px auto;
+  grid-template-columns: 60% auto;
   /* grid-column: span 2 / 6; */
 }
 
@@ -33,17 +33,19 @@ grid-row: span 1;
 
 .gridHero__description {
   background: coral;
+  padding: 25px;
+
   padding-left: 50px;
 }
 
 .gridHero__logoContainer {
-    position: absolute;
-    justify-self: center;
-    align-self: center;
-    padding-left: 150px;
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  padding-left: 15%;
 }
 
 .gridHero__logo {
-    border: 4px solid crimson;
-    width: 125px;
+  border: 4px solid crimson;
+  width: 125px;
 }
