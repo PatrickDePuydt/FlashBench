@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="container">
+            <div class="item heroBanner">
+                <img src="./1568x800.jpg">
+            </div>
+
+            <div class="gridHero__logoContainer">
+                <img class="gridHero__logo" src="./MightyCostco.jpg">
+            </div>
+
+            <div class="item description">
+                <h1>Description</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+                <p>Lorem ipsum d</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .parent {
+            border: 4px solid cyan;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+
+        .container {
+            background: deeppink;
+            grid-column: span 12;
+            /* IE Fallback */
+            display: flex;
+            display: grid;
+            grid-template-columns: minmax(400px, 890px) minmax(350px, 400px);
+            grid-template-rows: repeat(2, 150px);
+            grid-template-areas: "alpha bravo" "alpha bravo"
+        }
+
+
+        .item {
+            background: gold;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+
+        }
+
+
+        .heroBanner {
+            grid-area: alpha;
+            overflow: hidden;
+            max-height: 330px;
+        }
+
+        .description {
+            grid-area: bravo;
+            margin-left: 20px;
+            padding: 25px;
+        }
+
+        .gridHero__logoContainer {
+            position: absolute;
+            justify-self: center;
+            align-self: center;
+            left: 56%;
+        }
+
+        .gridHero__logo {
+            width: 125px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 200px 1fr);
+                background: dodgerblue;
+                grid-template-areas: "alpha alpha" "bravo bravo"
+            }
+            .description {
+                margin: 0;
+            }
+
+            .gridHero__logoContainer {
+                /* display: flex;
+               justify-content: center; */
+                position: absolute;
+                display: flex;
+                justify-self: center;
+                align-self: center;
+                padding: 0;
+                left: 50%;
+                right: 50%;
+                top: 25%;
+                justify-content: center;
+            }
+            .gridHero__logo {
+                width: 150px;
+                height: 125px
+            }
+        }
+    </style>
+
+</body>
+
+</html>
