@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script src="./js/main.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item item1">
+            <p>Image</p>
+        </div>
+        <div class="item item2">
+            <h1>Description</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+            <p>Lorem ipsum d</p>
+        </div>
+      
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .item {
+            background: gold;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+        }
+
+     
+        .container {
+            background: deeppink;
+            display: grid;
+            grid-template-columns: minmax(400px, 890px) minmax(350px, 400px);
+            grid-template-rows: repeat(2, 150px);
+            grid-gap: 20px;
+            grid-template-areas: "alpha bravo" "alpha bravo"
+        }
+
+        .item1 {
+            grid-area: alpha;
+        }
+
+        .item2 {
+            grid-area: bravo;
+        }
+
+
+
+        @media (max-width: 700px) {
+            .container {
+                background: red;
+                 grid-template-areas: 
+                 "alpha alpha" 
+                 "bravo bravo"
+            }
+        }
+    </style>
+
+</body>
+
+</html>
