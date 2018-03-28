@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>CSS Grid Fundamentals!</title>
+
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <div class="offerCard__parent">
+        <div class="offerCards">
+            <div class="offerCard offerCard1">
+
+                <!-- Background Image -->
+                <div class="offerCard__BackgroundImage__Container">
+                    <img class="offerCard__BackgroundImage" src="./images/Booking-1489x500.jpg" alt="">
+                </div>
+
+                <!-- Logo -->
+                <div class="offerCard__Logo__Container">
+                    <img class="offerCard__Logo" src="./images/MightyCostco-300x250.jpg" alt="">
+                </div>
+
+                <!-- Affinity Bandge -->
+                <div class="offerCard__AffinityBadge__Container">
+                     <img src="https://source.unsplash.com/random/160x40" alt="">
+                </div>
+
+                <!-- Banner -->
+                <div class="offerCard__DealDescription__Container">
+                    <h3 class="offerCard__Banner">Active Military</h3>
+                    <!-- Description -->
+                    <span class="offerCard__Description">
+                        proud to offer 10% off to all members of the military community -- activy duty, reservists, National Guard, veterans, and immediate military family members.
+                    </span>
+                    <!-- Deal Kick -->
+                    <span class="offerCard__DealKick">
+                        Plus up to 4.7% Cash Back
+                    </span>
+    
+                    <!-- CTA -->
+                    <div class="offerCard__CTA__Container">
+                        <button class="offerCard__CTA">Sign up &amp; Save</button> 
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="offerCard offerCard2">2</div>
+            <div class="offerCard offerCard3">3</div>
+            <div class="offerCard offerCard4">4</div>
+            <div class="offerCard offerCard5">5</div>
+            <div class="offerCard offerCard6">6</div>
+            <div class="offerCard offerCard7">7</div>
+            <div class="offerCard offerCard8">8</div>
+            <div class="offerCard offerCard9">9</div>
+            <div class="offerCard offerCard10">10</div>
+            <div class="offerCard offerCard11">11</div>
+            <div class="offerCard offerCard12">12</div>
+        </div>
+    </div>
+
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .offerCard__parent {
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border: 4px dashed black;
+        }
+
+        .offerCards {
+            display: grid;
+            border: 1px solid red;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+            grid-gap: 10px;
+        }
+
+         .offerCard {
+            border: 4px solid gold;
+            /* background: yellow; */
+            /* color: gold; */
+            grid-column: span 2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .offerCard3,
+        .offerCard4 {
+            background: black;
+            /* grid-column: span 2; */
+        }
+
+
+        /* New Styles */
+        .offerCard__BackgroundImage {
+            width: 100%;
+        }
+
+        .offerCard__Logo {
+            width: 125px;
+        }
+
+        .offerCard__DealDescription__Container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .offerCard__Banner {
+            text-align: center;
+        }
+    
+        .offerCard__Description {
+            text-align: center;
+            display: block;
+        }
+
+        .offerCard__DealKick {
+            text-align: center;
+            display: block;
+            color: mediumspringgreen;
+        }
+        
+        .offerCard__CTA__Container {
+            width: 100%;
+            border: 4px solid cyan ;
+        }
+
+        .offerCard__CTA {
+            border: none;
+            color: white;
+            background: midnightblue;
+            margin: auto;
+            display: block;
+            width: 60%;
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+        @media screen and (min-width: 768px) {
+            .offerCard__parent {
+                border: 1px dotted black;
+            }
+        }
+
+
+        @media screen and (min-width: 992px) {
+            .offerCard__parent {
+                border: 4px solid black;
+            }
+
+            .offerCards {
+                grid-template-columns: repeat(4, minmax(200px, 2fr));
+            }
+
+            .offerCard {
+                grid-column: span 1;
+            }
+            
+            .offerCard3,
+            .offerCard4 {
+                grid-column: span 2;
+            }
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            .offerCard__parent {
+
+                border: 4px solid cyan;
+            }
+        }
+    </style>
+</body>
+
+</html>
