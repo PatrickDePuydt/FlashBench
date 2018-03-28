@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style.css">
-    <title>CSS Grid Fundamentals!</title>
+    <title>Offer Card</title>
 
     <style>
        
@@ -13,59 +13,93 @@
 </head>
 
 <body>
-    <div class="offerCard__parent">
-        <div class="offerCards">
-            <div class="offerCard offerCard1">
+    <div class="offer-card_parent">
+        <div class="offer-cards">
 
+            
+            <div class="offer-Card offer-card1">
                 <!-- Background Image -->
-                <div class="offerCard__BackgroundImage__Container">
-                    <img class="offerCard__BackgroundImage" src="./images/Booking-1489x500.jpg" alt="">
+                <div class="offer-Card-c_graphics">
+                    <div class="graphics-c_banner">
+                        <img class="banner-image" src="./images/Booking-1489x500.jpg" alt="">
+                    </div>
+                    <!-- Logo -->
+                    <img class="graphics_merchant-logo" src="./images/MightyCostco-300x250.jpg" alt="">
                 </div>
 
-                <!-- Logo -->
-                <div class="offerCard__Logo__Container">
-                    <img class="offerCard__Logo" src="./images/MightyCostco-300x250.jpg" alt="">
-                </div>
-
-                <!-- Affinity Bandge -->
-                <div class="offerCard__AffinityBadge__Container">
-                     <img src="https://source.unsplash.com/random/160x40" alt="">
-                </div>
-
-                <!-- Banner -->
-                <div class="offerCard__DealDescription__Container">
-                    <h3 class="offerCard__Banner">Active Military</h3>
+                <!-- Deal Description -->
+                <div class="offer-Card-c_DealDescription">
+                    <!-- Affinity Bandge -->
+                    <div class="offer-Card-c_affinity-badge">
+                        <img src="https://source.unsplash.com/random/160x40" alt="">
+                    </div>
+                    
+                    <h3 class="offer-card_Banner">Active Military</h3>
                     <!-- Description -->
-                    <span class="offerCard__Description">
+                    <span class="offer-card_Description">
                         proud to offer 10% off to all members of the military community -- activy duty, reservists, National Guard, veterans, and immediate military family members.
                     </span>
                     <!-- Deal Kick -->
-                    <span class="offerCard__DealKick">
+                    <span class="offer-card_DealKick">
                         Plus up to 4.7% Cash Back
                     </span>
     
                     <!-- CTA -->
-                    <div class="offerCard__CTA__Container">
-                        <button class="offerCard__CTA">Sign up &amp; Save</button> 
+                    <div class="offer-Card-c_CTA">
+                        <button class="CTA-button">Sign up &amp; Save</button> 
                     </div>
                 </div>
             </div>
 
+                        <div class="offer-Card offer-card2">
+                <!-- Background Image -->
+                <div class="offer-Card-c_graphics">
+                    <div class="graphics-c_banner">
+                        <img class="banner-image" src="./images/Booking-1489x500.jpg" alt="">
+                    </div>
+                    <!-- Logo -->
+                    <img class="graphics_merchant-logo" src="./images/MightyCostco-300x250.jpg" alt="">
+                </div>
+
+                <!-- Deal Description -->
+                <div class="offer-Card-c_DealDescription">
+                    <!-- Affinity Bandge -->
+                    <div class="offer-Card-c_affinity-badge">
+                        <img src="https://source.unsplash.com/random/160x40" alt="">
+                    </div>
+                    
+                    <h3 class="offer-card_Banner">Active Military</h3>
+                    <!-- Description -->
+                    <span class="offer-card_Description">
+                        proud to offer 10% off to all members of the military community -- activy duty, reservists, National Guard, veterans, and immediate military family members.
+                    </span>
+                    <!-- Deal Kick -->
+                    <span class="offer-card_DealKick">
+                        Plus up to 4.7% Cash Back
+                    </span>
+    
+                    <!-- CTA -->
+                    <div class="offer-Card-c_CTA">
+                        <button class="CTA-button">Sign up &amp; Save</button> 
+                    </div>
+                </div>
+            </div>
+
+<!-- 
 
 
 
-
-            <div class="offerCard offerCard2">2</div>
-            <div class="offerCard offerCard3">3</div>
-            <div class="offerCard offerCard4">4</div>
-            <div class="offerCard offerCard5">5</div>
-            <div class="offerCard offerCard6">6</div>
-            <div class="offerCard offerCard7">7</div>
-            <div class="offerCard offerCard8">8</div>
-            <div class="offerCard offerCard9">9</div>
-            <div class="offerCard offerCard10">10</div>
-            <div class="offerCard offerCard11">11</div>
-            <div class="offerCard offerCard12">12</div>
+            <div class="offer-Card offer-card2">2</div>
+            <div class="offer-Card offer-card3">3</div>
+            <div class="offer-Card offer-card4">4</div>
+            <div class="offer-Card offer-card5">5</div>
+            <div class="offer-Card offer-card6">6</div>
+            <div class="offer-Card offer-card7">7</div>
+            <div class="offer-Card offer-card8">8</div>
+            <div class="offer-Card offer-card9">9</div>
+            <div class="offer-Card offer-card10">10</div>
+            <div class="offer-Card offer-card11">11</div>
+            <div class="offer-Card offer-card12">12</div> -->
         </div>
     </div>
 
@@ -73,7 +107,9 @@
         * {
             font-family: 'Open Sans', sans-serif;
         }
-        .offerCard__parent {
+
+      
+        .offer-card_parent {
             margin: 20px;
             padding: 20px;
             display: flex;
@@ -81,18 +117,16 @@
             border: 4px dashed black;
         }
 
-        .offerCards {
+        .offer-cards {
             display: grid;
-            border: 1px solid red;
+            border: 2px solid red;
             width: 100%;
             grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
             grid-gap: 10px;
         }
 
-         .offerCard {
-            border: 4px solid gold;
-            /* background: yellow; */
-            /* color: gold; */
+         .offer-Card {
+            /* border: 4px solid gold; */
             grid-column: span 2;
 
             display: flex;
@@ -101,49 +135,66 @@
 
         }
 
-        .offerCard3,
-        .offerCard4 {
+        .offer-card3,
+        .offer-card4 {
             background: black;
             /* grid-column: span 2; */
         }
 
 
         /* New Styles */
-        .offerCard__BackgroundImage {
+        /* Header */
+        .offer-Card-c_graphics {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .graphics-c_banner {
+            height: 115px;
+            overflow: hidden;
+        }
+        .banner-image {
             width: 100%;
+            transform: scale(1.5);
         }
 
-        .offerCard__Logo {
-            width: 125px;
+        .graphics_merchant-logo {
+            position: relative;
+            top: -55px;
+            width: 80px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .75);
         }
 
-        .offerCard__DealDescription__Container {
+        /* Deal Details */
+
+        .offer-Card-c_DealDescription {
+            margin-top: 30px;
             display: flex;
             align-items: center;
             flex-direction: column;
         }
 
-        .offerCard__Banner {
+        .offer-card_Banner {
             text-align: center;
         }
     
-        .offerCard__Description {
+        .offer-card_Description {
             text-align: center;
             display: block;
         }
 
-        .offerCard__DealKick {
+        .offer-card_DealKick {
             text-align: center;
             display: block;
             color: mediumspringgreen;
         }
         
-        .offerCard__CTA__Container {
+        .offer-Card-c_CTA{
             width: 100%;
-            border: 4px solid cyan ;
+            /* border: 4px solid cyan ; */
         }
 
-        .offerCard__CTA {
+        .CTA-button {
             border: none;
             color: white;
             background: midnightblue;
@@ -165,36 +216,36 @@
 
 
         @media screen and (min-width: 768px) {
-            .offerCard__parent {
+            .offer-card_parent {
                 border: 1px dotted black;
             }
         }
 
 
         @media screen and (min-width: 992px) {
-            .offerCard__parent {
+            .offer-card_parent {
                 border: 4px solid black;
             }
 
-            .offerCards {
+            .offer-cards {
                 grid-template-columns: repeat(4, minmax(200px, 2fr));
             }
 
-            .offerCard {
+            .offer-Card {
                 grid-column: span 1;
             }
             
-            .offerCard3,
-            .offerCard4 {
+            .offer-card3,
+            .offer-card4 {
                 grid-column: span 2;
             }
         }
 
 
         @media screen and (min-width: 1200px) {
-            .offerCard__parent {
+            .offer-card_parent {
 
-                border: 4px solid cyan;
+                /* border: 4px solid cyan; */
             }
         }
     </style>
