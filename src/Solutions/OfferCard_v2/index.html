@@ -214,14 +214,23 @@
 
 
 
-
+        /* Tablet */
         @media screen and (min-width: 768px) {
             .offer-card_parent {
                 border: 1px dotted black;
             }
+
+            .offer-cards {
+                grid-template-columns: repeat(4, 300px);
+            }
+
+            .offer-card {
+                grid-column: span 1;
+            }
+
         }
 
-
+        /* Desktop */
         @media screen and (min-width: 992px) {
             .offer-card_parent {
                 border: 4px solid black;
